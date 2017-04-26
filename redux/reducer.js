@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import reducer as counter from '../modules/Counter';
-import reducer as navigator from '../modules/Navigator';
+import { reducer as counter } from '../modules/Counter';
+import { reducer as navigator } from '../modules/Navigator';
 
-export default const rootReducer = combineReducers({
+export default rootReducer = combineReducers({
   // Counter sample app state. This can be removed in a live application
   counter,
 

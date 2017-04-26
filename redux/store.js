@@ -19,8 +19,8 @@ const composeEnhancers = (__DEV__ && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
 const enhancer = composeEnhancers(...enhancers);
 
 // create the store
-export default const store = createStore(
+export default store = createStore(
   reducer,
-  null,
+  undefined,
   enhancer,
 );

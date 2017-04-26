@@ -8,11 +8,11 @@ import {
 import { connect } from 'react-redux';
 
 const mapStateToProps = state => ({
-  counterState: state.counter,
+  value: state.counter.value,
 });
 
 const mapDispatchToProps = dispatch => ({
-  increment: dispatch(incrementCounter()),
+  incrementCounter: () => dispatch(increment()),
 });
 
 @connect(mapStateToProps, mapDispatchToProps)
@@ -20,13 +20,13 @@ export default class Counter extends Component {
   static displayName = 'Counter';
 
   render() {
-    const { counterState, increment } = this.props;
+    const { value, incrementCounter } = this.props;
 
     return (
       <ScrollView>
-        <Text>Counter state: { counterState }</Text>
+        <Text>Counter state: { value }</Text>
         <Button
-          onPress={increment}
+          onPress={incrementCounter}
           title='Increment'
         />
       </ScrollView>

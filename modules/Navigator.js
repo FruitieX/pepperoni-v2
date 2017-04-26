@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 
 import { connect } from 'react-redux';
-import { addNavigationHelpers } from 'react-navigation';
+import { TabNavigator, addNavigationHelpers } from 'react-navigation';
 
 export const AppNavigator = TabNavigator({
   /* -- Add views here -- */
-  Counter: { screen: require('./Counter') },
+  Counter: { screen: require('./Counter').default },
 });
 
 const mapStateToProps = state => ({
